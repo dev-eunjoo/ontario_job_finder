@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Job Search</title>
+    <link href="{{ url_for('static', filename='style7.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="header">
+      <div id="navbar">
+        <a href="#" id="logo">JobFinder</a>
+      </div>
+      <div class="helper"></div>
+      <div class="info">
+        <h1>Ontario Job Finder</h1>
+
+        <form action="/report" method="get" class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search for a job" aria-label="Search" name="word">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option3" name="value" checked>
+            <label class="form-check-label" for="inlineCheckbox2">Indeed + Workopolice</label>
+          </div>
+          <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" name="value" >
+          <label class="form-check-label" for="inlineCheckbox1">Indeed</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" name="value">
+            <label class="form-check-label" for="inlineCheckbox2">Workopolice</label>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <div class="ad">
+      <h1>Find your job and quickly download it!</h1> 
+    </div>
+</body>
+</html>
