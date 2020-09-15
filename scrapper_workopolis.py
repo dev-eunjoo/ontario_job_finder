@@ -2,9 +2,6 @@ import requests
 import math
 from bs4 import BeautifulSoup
 
-LIMIT = 30
-
-
 def get_last_page(url):
     #links =[]
     result = requests.get(url)
@@ -25,11 +22,11 @@ def extract_job(oneJob, jobsUrl):
 
     location = oneJob.find("span", {"class": "JobCard-location"}).get_text(strip=True).strip(" — ")
 
-    job_id = oneJob["data-jobkey"]
+    job_link = oneJob.find("a", {"class":"JobCard-titleLink"})["href"]
     return {"title" : title, 
     'company': company, 
     'location': location, 
-    'link':  f"{jobsUrl}&job={job_id}"}
+    'link':  f"https://www.workopolis.com/{job_link}"}
 
 
 def extract_jobs(last_page, url):
